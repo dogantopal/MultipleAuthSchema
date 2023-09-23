@@ -1,0 +1,26 @@
+﻿@model Account
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .text-wrap {
+       word-break: break-all;
+       overflow-wrap: break-word;
+    }
+</style>
+
+<div class="row">
+    <div class="col">
+        <div class="text-center">
+            <h1 class="display-4">Welcome</h1>
+            <div class="text-wrap">JWT Token: @Model.Token</div>
+            <br/>
+            @if (!string.IsNullOrEmpty(Model.Cookie))
+            {
+                <div class="text-wrap">Cookie: @Model.Cookie</div>
+            }
+        </div>
+    </div>
+</div>
